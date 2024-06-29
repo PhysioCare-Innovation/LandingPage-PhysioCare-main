@@ -395,46 +395,37 @@ section h1.title
 
 
 /*About Product**/
-.about-product{
-    background-color: #73C0AE;
-}
-
 .about-product {
-    height: 40vw;
-}
-
-.about-product .right{
-    min-width: 50%;
+    background-color: #73C0AE;
+    padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.about-product .right img{
-    max-width: 500px;
-}
-
-#about-product .left{
+.box {
     display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.left {
     color: white;
-    min-width: 20%;
-    margin-left: 1vw;
-    margin-right: 10vw;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#about-product .left .title{
+.left .title {
     font-size: 3vw;
     font-weight: 700;
     line-height: 1.1em;
 }
 
-#about-product .left p{
+.left p {
     margin: 1.5vw 0px;
     font-size: 1.8vw;
 }
 
-#about-product .left a{
+.left a {
     background-color: #003A79;
     color: white;
     padding: 1.2vw 6vw;
@@ -445,19 +436,30 @@ section h1.title
     text-decoration: none;
 }
 
-@media (max-width: 800px) and (min-width:200px) {
-    #about-product iframe {
-        height: 150px;
-        width: 200px;
-    }
+.right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-@media (max-width: 1300px) and (min-width:800px) {
-    #about-product iframe {
-        height: 250px;
-        width: 450px;
+
+.right img {
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    .about-product {
+        flex-direction: row;
     }
-
-
+    .left, .right {
+        flex: 1;
+    }
+    .left {
+        text-align: left;
+        margin: 0 20px;
+    }
 }
 
 /*Physiotherapist section**/
