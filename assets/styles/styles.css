@@ -395,37 +395,42 @@ section h1.title
 
 
 /*About Product**/
+/*About Product**/
+/* About Product */
 .about-product {
     background-color: #73C0AE;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el contenido horizontalmente */
 }
 
-.box {
+.about-product .box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%; /* Ajusta el ancho máximo del contenedor */
 }
 
-.left {
+.about-product .left {
     color: white;
-    text-align: center;
     margin-bottom: 20px;
+    text-align: center; /* Alinea el texto al centro */
 }
 
-.left .title {
+.about-product .left .title {
     font-size: 3vw;
     font-weight: 700;
     line-height: 1.1em;
 }
 
-.left p {
+.about-product .left p {
     margin: 1.5vw 0px;
     font-size: 1.8vw;
 }
 
-.left a {
+.about-product .left a {
     background-color: #003A79;
     color: white;
     padding: 1.2vw 6vw;
@@ -436,29 +441,27 @@ section h1.title
     text-decoration: none;
 }
 
-.right {
+.about-product .right {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en pantallas pequeñas */
+    justify-content: center; /* Centra las imágenes horizontalmente */
 }
 
-.right img {
-    max-width: 100%;
-    max-height: 300px;
-    height: auto;
-    margin: 10px;
+.about-product .right img {
+    max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor padre */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-height: 300px; /* Reduzca la altura máxima según sea necesario */
+    margin: 10px; /* Añade margen entre las imágenes */
 }
 
 @media (min-width: 768px) {
-    .about-product {
-        flex-direction: row;
+    .about-product .box {
+        flex-direction: row; /* Cambia a fila en pantallas más grandes */
     }
-    .left, .right {
-        flex: 1;
-    }
-    .left {
-        text-align: left;
-        margin: 0 20px;
+    .about-product .left, .about-product .right {
+        flex: 1; /* Ocupa el mismo espacio */
+        text-align: left; /* Alinea el texto a la izquierda */
+        margin: 0 20px; /* Añade margen a los lados */
     }
 }
 
